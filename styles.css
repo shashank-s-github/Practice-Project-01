@@ -5,6 +5,11 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@font-face {
+  font-family: "head";
+  src: url(/MochiyPopOne-Regular.ttf);
+}
+
 html,
 body {
   height: 100%;
@@ -38,6 +43,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "head";
+  font-size: 28px;
+  padding-bottom: 10px;
 }
 
 #nav h2 {
@@ -48,9 +56,117 @@ body {
   align-items: center;
   justify-content: center;
   border-right: 3px solid #000;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 #nav h2:nth-of-type(3) {
   /* background-color: rebeccapurple; */
   width: 35%;
+}
+
+#center {
+  height: 80%;
+  width: 100%;
+  /* background-color: aqua; */
+  padding: 5vh;
+  position: relative;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+  background-color: blanchedalmond;
+  position: relative;
+}
+
+#content video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  background-color: rgba(0, 0, 0, 0.134);
+  backdrop-filter: blur(3px);
+  padding: 3vw;
+  color: #fff;
+}
+
+#over1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 35vh;
+}
+
+#over1 h1 {
+  font-family: "head";
+  font-size: 3vw;
+}
+
+#over1 h2 {
+  font-size: 1.5vw;
+  padding: 2vw 2.2vw;
+  border-radius: 50%;
+  /* background-color: violet; */
+  border: 2px solid white;
+}
+
+#over2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid white;
+  padding: 1.5vw 0;
+}
+#over2 h4 {
+  font-size: 1.3vw;
+  font-weight: 500;
+}
+
+#over2 img {
+  height: 3vw;
+}
+
+#scroll {
+  height: 40vh;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: hidden; 
+  overflow-y: hidden;
+  /* background-color: aqua; */
+}
+#container {
+  height: 100%;
+  width: 130%;
+  display: inline-block;
+  padding: 2.5vw;
+  animation-name: anime;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* background-color: salmon; */
+}
+
+#scroll img {
+  /* display: none; */
+  height: 80%;
+  width: 8.6%;
+  border-radius: 70%;
+  object-fit: cover;
+  margin: 1vw;
+  margin-top: 50px;
+}
+
+@keyframes anime {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
